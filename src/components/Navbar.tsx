@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import { Container } from "./ui/Container";
 import { Button } from "./ui/Button";
+import { company } from "@/data/company";
 
 export function Navbar() {
   return (
@@ -23,7 +24,7 @@ export function Navbar() {
 
         <nav className="flex items-center justify-between h-16 md:h-24">
 
-          {/* ================= Logo ================= */}
+          {/*  Logo  */}
 
           <a
             href="#inicio"
@@ -41,13 +42,13 @@ export function Navbar() {
 
               <h2 className="text-base md:text-2xl font-bold text-primary">
 
-                Victory Desing Elevators
+               {company.name}
 
               </h2>
 
               <p className="hidden md:block text-sm text-gray-500">
 
-                Ingeniería para Sistemas de Elevación
+                Ingeniería Para Sistemas De Transporte Vertical
 
               </p>
 
@@ -55,7 +56,7 @@ export function Navbar() {
 
           </a>
 
-          {/* ================= Menú ================= */}
+          {/*  Menú  */}
 
           <ul className="hidden lg:flex items-center gap-10 font-medium text-foreground">
 
@@ -115,7 +116,7 @@ export function Navbar() {
 
           </ul>
 
-          {/* ================= Botón ================= */}
+          {/*  Botón  */}
 
           <div className="hidden lg:block">
 

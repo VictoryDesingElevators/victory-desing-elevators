@@ -10,6 +10,7 @@ import {
 import { Container } from "./ui/Container";
 import { SectionTitle } from "./ui/SectionTitle";
 import { Card } from "./ui/Card";
+import { company } from "@/data/company";
 
 const reasons = [
   {
@@ -61,7 +62,7 @@ export function WhyUs() {
         <SectionTitle
           subtitle="Más que instalar elevadores, construimos relaciones de confianza ofreciendo soluciones seguras, modernas y adaptadas a cada proyecto."
         >
-          ¿Por qué elegir Victory Desing Elevators?
+          ¿Por qué elegir  {company.name}?
         </SectionTitle>
 
         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">

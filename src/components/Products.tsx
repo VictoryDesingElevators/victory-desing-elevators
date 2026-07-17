@@ -36,7 +36,7 @@ export function Products() {
 
               <Image
                 src="/images/catalog-cover.jpg"
-                alt="Catálogo Victory Desing Elevators"
+                alt={`Catálogo ${company.name}`}
                 width={700}
                 height={900}
                 className="rounded-2xl object-cover w-full shadow-xl"
@@ -68,7 +68,7 @@ export function Products() {
             <p className="mt-6 text-lg text-gray-600 leading-8">
 
               Consulta nuestro catálogo completo y conoce las soluciones
-              que Victory Desing Elevators ofrece para edificios residenciales,
+              que  {company.name} ofrece para edificios residenciales,
               comerciales e industriales.
 
             </p>

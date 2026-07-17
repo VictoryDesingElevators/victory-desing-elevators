@@ -45,7 +45,7 @@ import { company } from "@/data/company";
               return;
             }
 
-            const text = `*Solicitud de Cotización - Victory Desing Elevator*
+            const text = `*Solicitud de Cotización - ${company.name}*
 
           *Nombre:*
           ${trimmedName}

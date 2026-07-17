@@ -5,6 +5,7 @@ import { Container } from "./ui/Container";
 import { SectionTitle } from "./ui/SectionTitle";
 import { Card } from "./ui/Card";
 import { Button } from "./ui/Button";
+import { company } from "@/data/company";
 
 export function About() {
   return (
@@ -50,7 +51,7 @@ export function About() {
 
             <p className="mt-6 text-gray-600 leading-8">
 
-              En Victory Desi Elevators trabajamos para ofrecer soluciones
+              En {company.name} trabajamos para ofrecer soluciones
               integrales para proyectos residenciales, comerciales e
               industriales. Nuestro equipo combina experiencia,
               tecnología y materiales de alta calidad para desarrollar

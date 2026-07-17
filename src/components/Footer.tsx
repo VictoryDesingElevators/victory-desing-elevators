@@ -9,6 +9,7 @@ import {
 
 import { Container } from "./ui/Container";
 import { Button } from "./ui/Button";
+import { company } from "@/data/company";
 
 export function Footer() {
   return (
@@ -18,7 +19,7 @@ export function Footer() {
 
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12">
 
-          {/* ================= EMPRESA ================= */}
+          {/* Empresa */}
 
           <div>
 
@@ -35,7 +36,7 @@ export function Footer() {
               <div>
 
                 <h3 className="text-2xl font-bold text-primary">
-                  Victory Desing Elevators
+                  {company.name}
                 </h3>
 
                 <p className="text-sm text-gray-400">
@@ -48,15 +49,13 @@ export function Footer() {
 
             <p className="mt-6 leading-8 text-gray-300">
 
-              Diseñamos y fabricamos soluciones para
-              elevadores con altos estándares de calidad,
-              seguridad e innovación.
+              {company.description}
 
             </p>
 
           </div>
 
-          {/* ================= ENLACES ================= */}
+          {/* Enlaces */}
 
           <div>
 
@@ -108,7 +107,7 @@ export function Footer() {
 
           </div>
 
-          {/* ================= CONTACTO ================= */}
+          {/*  Contacto */}
 
           <div>
 
@@ -125,9 +124,9 @@ export function Footer() {
                 <MapPin className="text-primary mt-1" />
 
                 <span>
-                  Calle 72 #63-49
+                  {company.address}
                   <br />
-                  Bogotá D.C.
+                  {company.city}
                 </span>
 
               </div>
@@ -136,15 +135,15 @@ export function Footer() {
 
                 <Phone className="text-primary mt-1" />
 
-                <span>
+                <div>
 
-                    +57 304 556 2090
-                    <br />
-                    +57 322 221 3527
-                    <br />
-                    +57 350 860 5935
+                  {company.phones.map((phone) => (
 
-                </span>
+                    <p key={phone}>{phone}</p>
+
+                  ))}
+
+                </div>
 
               </div>
 
@@ -152,13 +151,15 @@ export function Footer() {
 
                 <Mail className="text-primary mt-1" />
 
-                <span>
+                <div>
 
-                  ingenieria@victoryelevator.com.co 
-                  <br />
-                  comercial@victoryelevator.com.co
+                  {company.emails.map((email) => (
 
-                </span>
+                    <p key={email}>{email}</p>
+
+                  ))}
+
+                </div>
 
               </div>
 
@@ -166,7 +167,7 @@ export function Footer() {
 
           </div>
 
-          {/* ================= HORARIO ================= */}
+          {/*  Horario  */}
 
           <div>
 
@@ -182,23 +183,23 @@ export function Footer() {
 
               <div>
 
-                <p>
+                 <p>
 
-                  Lunes a Viernes
+                    {company.schedule.weekdays.days}
 
-                </p>
+                  </p>
 
-                <p className="text-gray-300 mt-2">
+                  <p className="text-gray-300 mt-2">
 
-                  8:00 AM - 1:00 PM
+                    {company.schedule.weekdays.morning}
 
-                </p>
+                  </p>
 
-                <p className="text-gray-300">
+                  <p className="text-gray-300">
 
-                  2:00 PM - 5:00 PM
+                    {company.schedule.weekdays.afternoon}
 
-                </p>
+                  </p>
 
               </div>
 
@@ -212,13 +213,13 @@ export function Footer() {
 
                 <p>
 
-                  Sabados
+                  {company.schedule.saturday.days}
 
                 </p>
 
                 <p className="text-gray-300 mt-2">
 
-                  8:00 AM - 12:00 PM
+                  {company.schedule.saturday.morning}
 
                 </p>
 
@@ -246,20 +247,14 @@ export function Footer() {
 
         </div>
 
-        {/* ================= COPYRIGHT ================= */}
+        {/*  Copyright  */}
 
         <div className="border-t border-gray-700 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
 
           <p className="text-gray-400 text-center">
 
-            © {new Date().getFullYear()} Victory Design Elevators.
+           © {new Date().getFullYear()} {company.name}.
             Todos los derechos reservados.
-
-          </p>
-
-          <p className="text-gray-500 text-sm">
-
-            Diseñado con Next.js + React + Tailwind CSS
 
           </p>
 

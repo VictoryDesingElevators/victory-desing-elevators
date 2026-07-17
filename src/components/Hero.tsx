@@ -1,13 +1,11 @@
 import Image from "next/image";
 import {
-  ArrowRight,
   Award,
-  Building2,
-  ShieldCheck,
 } from "lucide-react";
 
 import { Container } from "./ui/Container";
 import { Button } from "./ui/Button";
+import { company } from "@/data/company";
 
 export function Hero() {
   return (
@@ -53,9 +51,9 @@ export function Hero() {
 
             <p className="mt-8 text-xl text-gray-600 leading-9 max-w-xl">
 
-              Victory Desing Elevators desarrolla soluciones integrales para
-              sistemas de elevación, ofreciendo diseño, fabricación e asesoría
-               para proyectos residenciales, comerciales e industriales con altos estándares de calidad
+              {company.name} desarrolla soluciones integrales para
+              sistemas de transporte vertical, ofreciendo diseño, fabricación e asesoría
+              para proyectos residenciales, comerciales e industriales con altos estándares de calidad
               y seguridad.
 
             </p>
@@ -63,85 +61,23 @@ export function Hero() {
             {/* Boton */}
 
             <div className="mt-12 flex flex-wrap gap-5">
-              <Button
-                href="#productos"
-                variant="secondary"
-       >
-                Ver Productos
+                <Button
+                  href="#productos"
+                  variant="secondary"
+        >
+                  Ver Productos
 
-              </Button>
-
-            </div>
-
-            {/* Estadísticas */}
-            
-
-            <div className="grid grid-cols-3 gap-10 mt-20">
-
-            {/*  <div className="text-center">
-
-                <Building2
-                  className="mx-auto text-primary"
-                  size={34}
-                />
-                <h3 className="mt-4 text-3xl font-bold text-foreground">
-                  +100
-                </h3>
-                <p className="mt-2 text-gray-600">
-
-                  Proyectos
-
-                </p>
-
-              </div>
-
-              <div className="text-center">
-
-                <ShieldCheck
-                  className="mx-auto text-primary"
-                  size={34}
-                />
-
-                <h3 className="mt-4 text-3xl font-bold text-foreground">
-
-                  100%
-
-                </h3>
-
-                <p className="mt-2 text-gray-600">
-
-                  Calidad
-
-                </p>
-
-              </div> 
-
-              <div className="text-center">
-
-                <Award
-                  className="mx-auto text-primary"
-                  size={34}
-                />
-
-                <h3 className="mt-4 text-3xl font-bold text-foreground">
-
-                  +20
-
-                </h3>
-
-                <p className="mt-2 text-gray-600">
-
-                  Años de experiencia
-
-                </p>
-
-              </div> */}
+                </Button>
 
             </div>
+
+              <div className="grid grid-cols-3 gap-10 mt-20">
 
           </div>
 
-          {/* ===================== IMAGEN ===================== */}
+         </div>
+
+          {/*  Imagen  */}
 
           <div className="relative flex justify-center">
 
@@ -160,7 +96,7 @@ export function Hero() {
 
               <span className="text-primary font-semibold">
 
-                Victory Desing Elevators
+                {company.name}
 
               </span>
 
@@ -172,7 +108,7 @@ export function Hero() {
 
               <p className="mt-4 text-gray-600 leading-7">
 
-                Especialistas en diseño y fabricación de soluciones para sistemas de elevación.
+                Especialistas en diseño y fabricación de soluciones para sistemas de transporte vertical.
 
               </p>
 

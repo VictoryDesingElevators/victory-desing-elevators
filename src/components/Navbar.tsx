@@ -21,7 +21,7 @@ export function Navbar() {
     >
       <Container>
 
-        <nav className="flex items-center justify-between h-24">
+        <nav className="flex items-center justify-between h-16 md:h-24">
 
           {/* ================= Logo ================= */}
 
@@ -34,18 +34,18 @@ export function Navbar() {
               alt="Victory Elevator"
               width={65}
               height={65}
-              className="w-auto h-auto"
+              className="h-12 w-auto md:h-16"
             />
 
             <div>
 
-              <h2 className="text-2xl font-bold text-primary">
+              <h2 className="text-base md:text-2xl font-bold text-primary">
 
                 Victory Desing Elevators
 
               </h2>
 
-              <p className="text-sm text-gray-500">
+              <p className="hidden md:block text-sm text-gray-500">
 
                 Ingeniería para Sistemas de Elevación
 

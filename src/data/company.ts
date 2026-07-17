@@ -41,8 +41,9 @@ export const company: Company = {
     },
   },
 
-  // Archivos
-  catalog: "/catalogo.pdf",
+
+ // Archivos
+  catalog: "/catalog/catalogo-victory.pdf",
 
   // Estadísticas
   stats: {
